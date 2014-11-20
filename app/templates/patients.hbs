@@ -1,0 +1,6 @@
+<h4>Who do you want to check?</h4>
+<div class="small-6 large-6 columns">
+  {{#each}}
+    {{#link-to 'patient' id class="button round expand"}}{{patient_name}}{{/link-to}}
+  {{/each}}
+</div>
