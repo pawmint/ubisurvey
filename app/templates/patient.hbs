@@ -1,12 +1,11 @@
-<h3>{{patient_name}} :</h3>
-<h4>Veuillez compléter les informations suivantes :</h4>
+<h4>Veuillez compléter les informations suivantes pour {{patient_name}}:</h4>
 <div class="small-6 large-6 columns">
-  <form>
-    {{partial "categories"}}
+  <form {{action "confirm" on="submit"}}>
+    {{partial "components/form"}}
     <div class="row">
       <div class="large-12 small-6 columns">
-        <button {{action "confirm"}} class="button expand round">Confirmer</button>
-        {{#link-to 'patients' class="button round alert expand"}}Cancel{{/link-to}}
+        <button type="submit" class="button expand round">Confirmer</button>
+        {{#link-to 'patients' class="button round alert expand"}}Annuler{{/link-to}}
       </div>
     </div>
   </form>

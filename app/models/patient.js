@@ -2,7 +2,12 @@ import DS from "ember-data";
 
 var Patient = DS.Model.extend({
   patient_name: DS.attr('string'),
-  answers: DS.hasMany('answer', {async: true})
+  residence: DS.attr('string'),
+  age: DS.attr('number'),
+  autonomy: DS.attr('string'),
+  mobility: DS.attr('string'),
+  cognitive_skills: DS.attr('string'),
+  patient_details: DS.attr('string'),
 });
 
 Patient.reopenClass({
@@ -10,7 +15,12 @@ Patient.reopenClass({
     {
       id: 1,
       patient_name: 'Mme Gautier',
-      answers: []
+      residence: null,
+      age: null,
+      autonomy: null,
+      mobility: null,
+      cognitive_skills: null,
+      patient_details: null
     }
   ]
 });

@@ -1,0 +1,19 @@
+<h4>Veuillez compléter les informations suivantes:</h4>
+<div class="small-6 large-6 columns">
+  <form {{action "confirm" on="submit"}}>
+    <div class="row">
+      <div class="large-12 small-6 columns">
+        <label>Nom du patient:
+          {{input type="text" value=patient_name placeholder="Nom du patient"}}
+        </label>
+      </div>
+    </div>
+    {{partial "components/form"}}
+    <div class="row">
+      <div class="large-12 small-6 columns">
+        <button type="submit" class="button expand round">Créer</button>
+        {{#link-to 'patients' class="button round alert expand"}}Annuler{{/link-to}}
+      </div>
+    </div>
+  </form>
+</div>
