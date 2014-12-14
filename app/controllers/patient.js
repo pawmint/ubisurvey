@@ -6,7 +6,7 @@ export default Ember.ObjectController.extend({
     confirm: function confirm() {
       var flashMessage = this.get('controllers.flashMessage');
 
-      this.get('model').save()
+      this.get('model').save();
 
       flashMessage.set('message', 'Merci pour ces informations !');
       this.transitionTo('patients');

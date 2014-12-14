@@ -18,3 +18,4 @@ testem.log
 
 # Cordova
 cordova/platforms
+cordova/res
